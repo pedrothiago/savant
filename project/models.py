@@ -17,3 +17,11 @@ class AccountingItem(models.Model):
     def __str__(self):
         return self.name
 
+class ItemInProject(models.Model):
+    project = models.ForeignKey(Project)
+    item = models.ForeignKey(AccountingItem)
+    amount = models.IntegerField()
+    date_debit = models.DateField()
+    def __str__(self):
+        return self.item.name + " in " + self.project.name
+
