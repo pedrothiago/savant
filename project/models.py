@@ -9,3 +9,11 @@ class Project(models.Model):
 
     def __str__(self):
         return self.name
+
+class AccountingItem(models.Model):
+    name = models.CharField(max_length=100)
+    description = models.TextField()
+    cost = models.FloatField()
+    def __str__(self):
+        return self.name
+
