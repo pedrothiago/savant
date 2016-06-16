@@ -18,4 +18,7 @@ from django.contrib import admin
 
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
+    url(r'', include('project.urls')),
 ]
+
+admin.site.site_header = 'Savant'
